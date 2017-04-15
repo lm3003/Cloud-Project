@@ -354,18 +354,18 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{Mobile Cloud Computing: Architecture, Issues and Advantages}
+\title{Cloud Computing: Health Project}
 
 
 % author names and affiliations
 % use a multiple column layout for up to two different
 % affiliations
 
-\author{\IEEEauthorblockN{Love Modi}
+\author{\IEEEauthorblockN{Aritra Mandal, Love Modi, Yash Aggrawal, Saurabh Pandey}
 \IEEEauthorblockA{Department of Computer Information and Science\\
 Indiana University Purdue University Indianapolis\\
-Indianapolis, USA\\
-lmodi@iupui.edu}
+Indianapolis, USA
+}
 }
 
 % conference papers do not typically use \thanks and this command
@@ -404,12 +404,12 @@ lmodi@iupui.edu}
 
 
 \begin{abstract}
-Today, we live in an era where Mobile Applications have become the new norm for accessing information and availing web based services. The synchronization of Cloud Computing (CC) with Mobile applications has played a major role in the tremendous growth and success that mobile devices (e.g. smart phones, tablets, PC's etc.) have seen recently. This paper tries to give you an overview on Mobile Cloud Computing (MCC). We break MCC into two parts, i.e. Mobile Computing (MC) and Cloud Computing (CC), analyze their properties and then integrate them to understand MCC on the whole, breaking down the several layers comprising its architecture. We finally end the discussion after projecting some advantages and existing issues with this technology.
+The aim of this project is to design and develop a reasoning or inference engine for generating a probabilistic relationship between an individual's diet, physical activities and health assessments, indicating the next steps towards the person's health improvement. This report is a an attempt to document the entire developmental process that this project underwent, our design methodology, implementation details and the result analysis, in detail. We start our discussion with an introduction to the problem statement and go on to discuss the possible solutions using the existing techniques. Once we finalize the our strategy (Bayesian Network) for this project, this report enlists our design model, implementation details and analysis of experimental results. To conclude, we discuss the benefits \& shortcomings of our approach and project the future scope for this project.
 
 \end{abstract}
 
 \begin{IEEEkeywords}
-Mobile Cloud Computing (MCC); Cloud Computing (CC); Mobile Computing (MC)
+Bayesian Network, Adaptive Decision Support System (ADSS)
 
 \end{IEEEkeywords}
 
@@ -428,15 +428,18 @@ Mobile Cloud Computing (MCC); Cloud Computing (CC); Mobile Computing (MC)
 
 \section{Introduction}
 % no \IEEEPARstart
-In these recent times we have seen a drastic, almost explosive surge in the development and usage of different Mobile and Cloud Computing (CC) technologies. These technologies have brought information accessibility, services and several facilities at a fingertip distance, so much so that they have now become a necessity rather than a luxury for many people. Even before the advent of CC, mobile devices had achieved good amount of popularity because of its location and time independent usability feature. However, they faced major challenges in terms of resources (e.g. battery life, bandwidth, storage etc.) and communications (e.g. mobility and security) [1]. CC integrated with Mobile devices (Mobile Cloud Computing as we call it), has gone great lengths to help in mitigating these challenges.
+We start this discussion with our problem statement. We lack a firm understanding of how to motivate youth with chronic conditions such as obesity and diabetes to become engaged participants in disease prevention or management programs. We must improve accessibility, practicality, and scalability of prevention or management strategies for this population in “real world” settings which are applicable to youth. [1]. We want to address the this problem of disordered health amongst children due to the incompatibility between their food intake, physical activity and their metabolism. To resolve this issue, we want to design a personalized and adaptable, self learning engine (Adaptive Decision Support System (ADSS)) which takes its inputs parameters such as the calorie intake, physical activity \& medical history (weight, belly size, glucose levels, $HbA_{1c}$ levels etc.) to calculate a healthiness index of an individual. This information can be further used to find the next steps which a person needs to take to improve his/her health. Depending on the steps fulfilled by the individual and with earlier mentioned input parameters given to the system from time to time, the system should be able to predict which steps improve the person's health more and suggest more of those steps to keep improving the individual's health iteratively.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Today, we see a lot of applications that can track the amount of calories burnt or indicate the amount of calories present in the food we intake. They can also suggest the exercises which need to be done to improve the health of any individual depending on the medical history or food intake. However, there is a dearth of applications which are self learning to indicate if the actions taken by an individual are actually bringing tangible benefits. With this idea, we move ahead to find such techniques which would help us analyze the output data to implement a self learning system. The obvious type of our problem leads our attention towards several machine learning techniques, which have proved beneficial for such problems. After researching scores of machine learning articles, Bayesian network stands out to be a powerful yet simple tool to address our problem. There are several interesting and helpful papers such as 'Bayesian network technologies - Applications and Graphical Models' [2], 'Autonomic decision making based on bayesian networks and ontologies' [3], 'Using Bayesian Networks to improve the Decision-Making Process in Public Health Systems' [4], which enabled us to come up with a design model. Using this design model, we go ahead to develop an ADSS based on Bayesian networks and the best clinical practices to generate solutions for the appropriate diet and physical activity [1].
 
-CC has emerged as one of the successful computing technologies probably due to the simple, scalable features, and enormous flexibility. Also, cloud providers these days allow customers to use softwares, platforms and infrastructure at such a low cost, that it has become more profitable for most of the businesses to switch over to cloud. Additionally CC provides users elasticity, to request resources as per their requirements at any time. Thus mobile applications now can be developed with minimum service provider involvement and management exercises regarding resource engagement. The Mobile Cloud Computing (MCC) concept is nothing but integration of CC into the mobile environment along with all of its interesting features.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-This paper provides a comprehensive survey on MCC, its architecture, features and applications. The next sections in the paper comprise an overview on MCC with its features, followed by a discussion on its architecture to understand how MCC actually works. We follow this discussion with some applications, advantages and a brief discussion existing issues in using MCC. We finally conclude with an overall discussion about this technology with its merits and demerits.
+This paper provides a comprehensive report on design and developmental steps towards building the described system. We perform certain experiments on the system and evaluate the results 
+
+MCC, its architecture, features and applications. The next sections in the paper comprise an overview on MCC with its features, followed by a discussion on its architecture to understand how MCC actually works. We follow this discussion with some applications, advantages and a brief discussion existing issues in using MCC. We finally conclude with an overall discussion about this technology with its merits and demerits.
 
 % You must have at least 2 lines in the paragraph with the drop letter
 % (should never be an issue)
